@@ -186,4 +186,4 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
 
     return $retorno;
 }
-?>
+?>  
