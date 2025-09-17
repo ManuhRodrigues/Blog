@@ -18,7 +18,7 @@
             </div>
 
             <div class="col-md-10" style="padding-top: 50px;">
-                <h2>Pagina teste includes</h2>
+                <h2>Pagina Inicial</h2>
             </div>
         </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Página inicial | Projeto para Web com PHP - Manuela</title>
+    <title>Página inicial | Projeto para Web com PHP</title>
     <link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
                     require_once 'includes/funcoes.php';
                     require_once 'core/conexao_mysql.php';
                     require_once 'core/sql.php';
-                    require_once 'core/mysqli.php';
+                    require_once 'core/mysql.php';
                 ?>
             </div>
         </div>
@@ -82,7 +82,7 @@ $posts = buscar(
             (<?php echo $post['nome']; ?>)
             <span class="badge badge-dark">
                 <?php echo $data2; ?>
-    </span>
+            </span>
         </a>
     <?php
     }
@@ -98,4 +98,4 @@ $posts = buscar(
 
 <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
 </body>
-</hteml>
+</html>
