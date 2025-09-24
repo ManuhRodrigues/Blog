@@ -1,4 +1,3 @@
-
 <?php
 
 function insere(string $entidade, array $dados) : bool
@@ -51,7 +50,7 @@ function atualiza(string $entidade, array $dados, array $criterio = []) : bool
 
         $nome_campo = (count($expressao) < 4) ? $expressao[0] : $expressao[1];
 
-        if(isset($nome_campo)){
+    if(isset($nome_campo)){
             $nome_campo = $nome_campo . '_' . rand();
         }
 
@@ -60,11 +59,11 @@ function atualiza(string $entidade, array $dados, array $criterio = []) : bool
         $$nome_campo = $dado;
     }
 
-    $instrucao = update($entidade, $coringa_dados, $coringa_criterio);
+        $instrucao = update($entidade, $coringa_dados, $coringa_criterio);
 
-    $conexao = conecta();
+        $conexao = conecta();
 
-    $stmt = mysqli_prepare($conexao, $instrucao);
+        $stmt = mysqli_prepare($conexao, $instrucao);
 
     if(isset($tipo)){
         $comando = "mysqli_stmt_bind_param(\$stmt, '" . implode('', $tipo) . "'";
@@ -155,7 +154,7 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
     }
 
     $instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
-
+    
     $conexao = conecta();
 
     $stmt = mysqli_prepare($conexao, $instrucao);
@@ -186,4 +185,4 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
 
     return $retorno;
 }
-?>  
+?>

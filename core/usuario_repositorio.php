@@ -4,7 +4,7 @@ require_once '../includes/funcoes.php';
 require_once 'conexao_mysql.php';
 require_once 'sql.php';
 require_once 'mysql.php';
-$salt = '$exemplosaltifsp';
+$salt = '2025';
 
 foreach ($_POST as $indice => $dado) {
     $$indice = limparDados($dado);
@@ -98,9 +98,7 @@ switch($acao){
         header('Location: ../usuarios.php');
         exit;
         break;
-
-    default:
+    }
         header('Location: ../index.php');
-        exist; 
-}
-?> 
+     
+?>

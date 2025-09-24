@@ -59,7 +59,7 @@ string $ordem = null) : string
 
     if(!empty($criterio))
     {
-        $instrucao .= 'WHERE ';
+        $instrucao .= ' WHERE ';
 
         foreach($criterio as $expressao)
         {
@@ -69,7 +69,7 @@ string $ordem = null) : string
 
     if(!empty($ordem))
     {
-        $instrucao .= "ORDER BY $ordem ";
+        $instrucao .= " ORDER BY $ordem ";
     }
     return $instrucao;
 }
